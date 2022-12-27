@@ -7,7 +7,6 @@
 //rechanger en ton vector quand tu l'auras codé
 
 namespace ft {
-
 }
 
 #endif
