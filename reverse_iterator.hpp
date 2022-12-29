@@ -29,14 +29,47 @@ namespace ft {
 			reverse_iterator	&operator=(reverse_iterator const &ref);
 			reference			operator*(void) const;	
 			pointer				operator->(void) const;
-			reverse_iterator	&operator--(int);
+			reference			operator[](difference_type n) const;
+			
+			reverse_iterator	operator--(int);
+			reverse_iterator	&operator--(void);
+			reverse_iterator	operator++(int);
+			reverse_iterator	&operator++(void);
+			reverse_iterator	operator+(difference_type n) const;
+			reverse_iterator	operator-(difference_type n) const;
+			reverse_iterator	&operator+=(difference_type n);
+			reverse_iterator	&operator-=(difference_type n);
+
 		/*member functions*/
 			iterator_type	base(void) const;
 
 		
 		protected :
 			Iter	current;
+
 	};
+	template< class Iterator1, class Iterator2 >
+	bool operator==( const std::reverse_iterator<Iterator1>& left,
+                 const std::reverse_iterator<Iterator2>& right );
+	template< class Iterator1, class Iterator2 >
+	bool operator!=( const std::reverse_iterator<Iterator1>& left,
+                 const std::reverse_iterator<Iterator2>& right );
+
+	template< class Iterator1, class Iterator2 >
+	bool operator<( const std::reverse_iterator<Iterator1>& left,
+                const std::reverse_iterator<Iterator2>& right );
+
+	template< class Iterator1, class Iterator2 >
+	bool operator>( const std::reverse_iterator<Iterator1>& left,
+                const std::reverse_iterator<Iterator2>& right );
+
+	template< class Iterator1, class Iterator2 >
+	bool operator<=( const std::reverse_iterator<Iterator1>& left,
+                const std::reverse_iterator<Iterator2>& right );
+
+	template< class Iterator1, class Iterator2 >
+	bool operator>=( const std::reverse_iterator<Iterator1>& left,
+                const std::reverse_iterator<Iterator2>& right );
 
 }
 
