@@ -1,11 +1,6 @@
 #ifndef REVERSE_ITERATOR_TPP
 # define REVERSE_ITERATOR_TPP
 
-# include "iterator_traits.hpp"
-# include "reverse_iterator.hpp"
-# include <memory>
-
-#include <iostream>	
 namespace ft {
 	
 	/* constructors */
@@ -141,57 +136,54 @@ namespace ft {
 		current = current + n;
 		return (*this);
 	}
-
+	/*non_member functions*/
 	template< class Iterator1, class Iterator2 >
 	bool
-		operator==( const std::reverse_iterator<Iterator1>& left,
-		const std::reverse_iterator<Iterator2>& right )
+		operator==( const ft::reverse_iterator<Iterator1>& left,
+		const ft::reverse_iterator<Iterator2>& right )
 	{
 		return (left.base() == right.base());
 	}
 
 	template< class Iterator1, class Iterator2 >
 	bool
-		operator!=( const std::reverse_iterator<Iterator1>& left,
-		const std::reverse_iterator<Iterator2>& right )
+		operator!=( const ft::reverse_iterator<Iterator1>& left,
+		const ft::reverse_iterator<Iterator2>& right )
 	{
 		return (left.base() != right.base());
 	}
 
 	template< class Iterator1, class Iterator2 >
 	bool
-		operator<( const std::reverse_iterator<Iterator1>& left,
-		const std::reverse_iterator<Iterator2>& right )
+		operator<( const ft::reverse_iterator<Iterator1>& left,
+		const ft::reverse_iterator<Iterator2>& right )
 	{
 		return (left.base() > right.base());
 	}
 
 	template< class Iterator1, class Iterator2 >
 	bool
-		operator>( const std::reverse_iterator<Iterator1>& left,
-		const std::reverse_iterator<Iterator2>& right )
+		operator>( const ft::reverse_iterator<Iterator1>& left,
+		const ft::reverse_iterator<Iterator2>& right )
 	{
 		return (left.base() < right.base());
 	}
 
 	template< class Iterator1, class Iterator2 >
 	bool
-		operator<=( const std::reverse_iterator<Iterator1>& left,
-		const std::reverse_iterator<Iterator2>& right )
+		operator<=( const ft::reverse_iterator<Iterator1>& left,
+		const ft::reverse_iterator<Iterator2>& right )
 	{
 		return (left.base() >= right.base());
 	}
 
-
 	template< class Iterator1, class Iterator2 >
 	bool
-		operator>=( const std::reverse_iterator<Iterator1>& left,
-		const std::reverse_iterator<Iterator2>& right )
+		operator>=( const ft::reverse_iterator<Iterator1>& left,
+		const ft::reverse_iterator<Iterator2>& right )
 	{
 		return (left.base() <= right.base());
 	}
-
-
 
 }
 

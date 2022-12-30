@@ -8,7 +8,7 @@ OBJS	= $(SRCS:.cpp=.o)
 
 DEPS	= $(OBJS:.o=.d)
 
-CFLAGS	= -Wall -Wextra -Werror -std=c++98 -g3 -MMD
+CFLAGS	= -Wall -Wextra -Werror -std=c++11 -g3 -MMD
 
 all	:	$(NAME)
 

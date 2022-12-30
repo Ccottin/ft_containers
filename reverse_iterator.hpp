@@ -47,29 +47,29 @@ namespace ft {
 		protected :
 			Iter	current;
 
-	};
+	};// maybe protect you shit so it wont get templated with anything
 	template< class Iterator1, class Iterator2 >
-	bool operator==( const std::reverse_iterator<Iterator1>& left,
-                 const std::reverse_iterator<Iterator2>& right );
+	bool operator==( const ft::reverse_iterator<Iterator1>& left,
+                 const ft::reverse_iterator<Iterator2>& right );
 	template< class Iterator1, class Iterator2 >
-	bool operator!=( const std::reverse_iterator<Iterator1>& left,
-                 const std::reverse_iterator<Iterator2>& right );
+	bool operator!=( const ft::reverse_iterator<Iterator1>& left,
+                 const ft::reverse_iterator<Iterator2>& right );
 
 	template< class Iterator1, class Iterator2 >
-	bool operator<( const std::reverse_iterator<Iterator1>& left,
-                const std::reverse_iterator<Iterator2>& right );
+	bool operator<( const ft::reverse_iterator<Iterator1>& left,
+                const ft::reverse_iterator<Iterator2>& right );
 
 	template< class Iterator1, class Iterator2 >
-	bool operator>( const std::reverse_iterator<Iterator1>& left,
-                const std::reverse_iterator<Iterator2>& right );
+	bool operator>( const ft::reverse_iterator<Iterator1>& left,
+                const ft::reverse_iterator<Iterator2>& right );
 
 	template< class Iterator1, class Iterator2 >
-	bool operator<=( const std::reverse_iterator<Iterator1>& left,
-                const std::reverse_iterator<Iterator2>& right );
+	bool operator<=( const ft::reverse_iterator<Iterator1>& left,
+                const ft::reverse_iterator<Iterator2>& right );
 
 	template< class Iterator1, class Iterator2 >
-	bool operator>=( const std::reverse_iterator<Iterator1>& left,
-                const std::reverse_iterator<Iterator2>& right );
+	bool operator>=( const ft::reverse_iterator<Iterator1>& left,
+                const ft::reverse_iterator<Iterator2>& right );
 
 }
 

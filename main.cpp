@@ -1,14 +1,21 @@
 #include "ft_containers.hpp"
 #include "iterator_traits.hpp"
 #include "reverse_iterator.hpp"
+#include "enable_if.hpp"
 #include <iterator>
 #include <list>
 #include <iostream>
 #include <typeinfo>
+#include "test.hpp"
 
 int	main(  )
 {
-	std::vector<int> vector;
+	std::string c = "c";
+	do_things(c);
+	/**************************/
+	/*reverse iterator testing*/
+	/**************************/
+/*	std::vector<int> vector;
 	vector.push_back(1);
 	vector.push_back(3);
 	vector.push_back(2);
@@ -68,6 +75,21 @@ int	main(  )
 	std::cout << 4 << std::endl;
 	if (rit > rerit)
 	std::cout << 5 << std::endl;
+
+	std::reverse_iterator<std::vector<int>::iterator> reritt = ritt;
+	if (ritt == reritt)
+		std::cout << 0 << std::endl;
+	if (ritt != reritt)
+		std::cout << 1 << std::endl;
+	if (ritt <= reritt)
+	std::cout << 2 << std::endl;
+	if (ritt >= reritt)
+	std::cout << 3 << std::endl;
+	if (ritt < reritt)
+	std::cout << 4 << std::endl;
+	if (ritt > reritt)
+	std::cout << 5 << std::endl;*/
+
 
 /*	std::cout << typeid(ft::iterator_traits< std::vector<int>::iterator >::iterator_category).name() << std::endl;
 	std::cout << typeid(std::iterator_traits< std::vector<int>::iterator >::iterator_category).name() << std::endl;*/
