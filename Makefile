@@ -1,6 +1,6 @@
 NAME	= ft_containers
 
-SRCS	= main.cpp
+SRCS	= main.cpp reverse_iterator_testing.cpp test_is_integral.cpp
 
 CC	= c++
 
