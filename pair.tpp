@@ -37,7 +37,7 @@ namespace ft {
 	}
 
 /*	pair & pair::operator=(const pair & pr) should i keep or remove? 
-	{
+{
 		if (this != &pr)
 		{
 			this->first = pr.first;

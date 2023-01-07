@@ -43,6 +43,10 @@ int	main(  )
 	if (!(p == pp))
 		std::cout << "also works\n";
 		
+	for (std::vector<int>::iterator it = p.first.begin(); it != p.first.end(); it++)
+		 std::cout << *it << " " ;
+	for (std::vector<int>::iterator it = pp.first.begin(); it != pp.first.end(); it++)
+		 std::cout << *it << " " ;
 	if (p != pp)
 		std::cout << "workey\n";
 	if (p < pp)
@@ -136,8 +140,6 @@ int	main(  )
 		std::cout << "case 13 \n";
 	if (ppp <= pp)	
 		std::cout << "case 14 \n";
-
-
 
 	}
 
