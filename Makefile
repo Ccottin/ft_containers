@@ -1,14 +1,14 @@
 NAME	= ft_containers
 
-SRCS	= main.cpp reverse_iterator_testing.cpp test_is_integral.cpp
-
+SRCS	= main.cpp reverse_iterator_testing.cpp test_is_integral.cpp \
+			pair_testing.cpp stack_testing.cpp
 CC	= c++
 
 OBJS	= $(SRCS:.cpp=.o)
 
 DEPS	= $(OBJS:.o=.d)
 
-CFLAGS	= -Wall -Wextra -Werror -std=c++11 -g3 -MMD
+CFLAGS	= -Wall -Wextra -Werror -std=c++98 -g3 -MMD
 
 all	:	$(NAME)
 

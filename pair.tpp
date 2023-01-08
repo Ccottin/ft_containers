@@ -14,6 +14,7 @@
 # define PAIR_TPP
 
 # include "lexicographical_compare.hpp"
+# include <iostream>
 
 namespace ft {
 
@@ -36,8 +37,9 @@ namespace ft {
 		this->second = b;
 	}
 
-/*	pair & pair::operator=(const pair & pr) should i keep or remove? 
-{
+/*	template< class T1, class T2 > SHOULD I LEAVE IT OMFG
+	pair<T1, T2>	& pair<T1, T2>::operator=(const ft::pair<T1, T2> & pr) 
+	{
 		if (this != &pr)
 		{
 			this->first = pr.first;
@@ -45,6 +47,7 @@ namespace ft {
 		}
 		return (*this);
 	}*/
+
 	template< class T1, class T2 >
 	ft::pair<T1, T2>	make_pair(T1 t, T2 u)
 	{
@@ -67,7 +70,8 @@ namespace ft {
 	template< class T1, class T2 >
 	bool operator<( const ft::pair<T1, T2>& lhs, const ft::pair<T1, T2>& rhs )
 	{
-		return (lhs.first < rhs.first && lhs.second < rhs.second) ?
+			return (lhs.first < rhs.first || 
+			( !(rhs.first < lhs.first) && lhs.second < rhs.second) ) ?
 			true : false;
 	}
 	

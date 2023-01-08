@@ -6,7 +6,7 @@
 /*   By: ccottin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 13:16:36 by ccottin           #+#    #+#             */
-/*   Updated: 2023/01/07 21:11:27 by ccottin          ###   ########.fr       */
+/*   Updated: 2023/01/08 16:40:34 by ccottin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ namespace ft {
 		pair(const pair< U, V > & pr);
 		pair(const first_type& a, const second_type& b);
 	
-		pair & operator=(const pair & pr) = default;
+		pair & operator=(const pair & pr);
 	};
 	/***********/
 	/*make_pair*/

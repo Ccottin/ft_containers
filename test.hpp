@@ -6,6 +6,8 @@
 
 void	test_is_integral(void);
 void	reverse_iterator_testing(void);
+void	pair_testing(void);
+void	stack_testing(void);
 
 
 
