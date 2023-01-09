@@ -2,6 +2,7 @@
 #include <stack>
 #include <deque>
 #include <list>
+#include <map>
 #include <iostream>
 #include "stack.hpp"
 
@@ -148,14 +149,10 @@ void	test_wqeue(void)
 	std::cout << (test1 >= test3) << std::endl;
 	std::cout << (test1 < test3) << std::endl;
 	std::cout << (test1 <= test3) << std::endl;
-
-
 }
 
-
-void	stack_testing(void)
+void	test_wvector(void)
 {
-
 	std::vector<int> vector;
 	vector.push_back(1);
 	vector.push_back(3);
@@ -223,7 +220,20 @@ void	stack_testing(void)
 	std::cout << (test1 >= test3) << std::endl;
 	std::cout << (test1 < test3) << std::endl;
 	std::cout << (test1 <= test3) << std::endl;
+}
 
-	test_wqeue();
+void	stack_testing(void)
+{
+	test_wvector();
+	std::cout << "🌁separator testOfVector🌁" << std::endl;
 	test_wlist();
+	std::cout << "🍓separator motherfockor🍓" << std::endl;
+	test_wqeue();
+	std::cout << "🐊separator alligator🐊" << std::endl;
+	
+	
+//	ft::map<int, std::array<int, 10> > test; more testing here when you get the shit 
+//	std::map<int, std::array<int, 10> > test1;
+	
+	
 }

@@ -18,7 +18,7 @@
 int	main(  )
 {
 	stack_testing();
-	//pair_testing();
-	//test_is_integral();
-	//reverse_iterator_testing();
+//	pair_testing();
+//	test_is_integral();
+//	reverse_iterator_testing();
 }
