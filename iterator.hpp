@@ -6,7 +6,7 @@
 /*   By: ccottin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 13:47:47 by ccottin           #+#    #+#             */
-/*   Updated: 2023/01/10 14:50:42 by ccottin          ###   ########.fr       */
+/*   Updated: 2023/01/10 15:57:51 by ccottin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ namespace ft {
 		class Pointer = T*, class Reference = T& > 
 	struct	iterator
 	{
-		typedef typename	Distance	difference_type;
+		typedef				Distance	difference_type;
 		typedef				T			value_type;
 		typedef				Pointer		pointer;
 		typedef				Reference	reference;
-		typedef typename	Category	iterator_category;
-	}
+		typedef				Category	iterator_category;
+	};
 
 }
 
