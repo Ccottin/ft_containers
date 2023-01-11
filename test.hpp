@@ -4,6 +4,7 @@
 # include "enable_if.hpp"
 # include "is_integral.hpp"
 
+void	test_raIterator(void);
 void	test_is_integral(void);
 void	reverse_iterator_testing(void);
 void	pair_testing(void);

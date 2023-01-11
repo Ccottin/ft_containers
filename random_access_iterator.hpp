@@ -6,7 +6,7 @@
 /*   By: ccottin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 13:00:18 by ccottin           #+#    #+#             */
-/*   Updated: 2023/01/10 21:44:16 by ccottin          ###   ########.fr       */
+/*   Updated: 2023/01/11 18:34:14 by ccottin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,6 +110,11 @@ namespace ft {
 				random_access_iterator<T> temp = *this;
 				return (temp -= n);
 			}
+	
+			reference					operator[](const difference_type n) const
+			{
+				return ( *(*this + n) );
+			}
 			
 
 		/*********************/
@@ -151,7 +156,7 @@ namespace ft {
 		/*protected actual value*/
 		/************************/
 			
-		//remove cometary	protected :
+		protected :
 				pointer	_ptr;
 
 		/*********************/
@@ -172,6 +177,52 @@ namespace ft {
 				{
 					return (!(lhs == rhs)) ? true : false;
 				}
+
+				template< class E >
+				friend bool	operator<(const ft::random_access_iterator<E> & lhs,
+					const ft::random_access_iterator<E> & rhs)
+				{
+					return (lhs._ptr < rhs._ptr) ?
+						true : false;
+				}
+
+				template< class E >
+				friend bool	operator>(const ft::random_access_iterator<E> & lhs,
+					const ft::random_access_iterator<E> & rhs)
+				{
+					return (rhs < lhs);
+				}
+
+				template< class E >
+				friend bool	operator>=(const ft::random_access_iterator<E> & lhs,
+						const ft::random_access_iterator<E> & rhs)
+				{
+					return ( !(lhs < rhs) );
+				}
+
+				template< class E >
+				friend bool	operator<=(const ft::random_access_iterator<E> & lhs,
+					const ft::random_access_iterator<E> & rhs)
+				{	
+					return ( !(lhs > rhs) );
+				}
+
+				template< class E >
+				friend random_access_iterator<E>	
+					operator+(const difference_type n, const
+					ft::random_access_iterator<E> & rhs) {
+				
+				random_access_iterator<T> temp = rhs;
+				return (temp += n);
+			}
+			
+				template< class E >
+				friend difference_type				
+					operator-(const random_access_iterator<E> &rhs,
+							const random_access_iterator<E> &lhs)
+			{
+				return (rhs._ptr - lhs._ptr);
+			}
 
 	
 		}; //class

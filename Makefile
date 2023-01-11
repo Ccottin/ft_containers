@@ -1,7 +1,7 @@
 NAME	= ft_containers
 
 SRCS	= main.cpp test_reverse_iterator.cpp test_is_integral.cpp \
-			test_pair.cpp test_stack.cpp
+			test_pair.cpp test_stack.cpp #test_raIterator.cpp
 CC		= c++
 
 OBJS	= $(SRCS:.cpp=.o)
